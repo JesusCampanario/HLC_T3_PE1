@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+  <!-- Contenido de la página -->
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jesús Campanario Sánchez</title>
+    <link rel="stylesheet" href="estilosHLCPracticaEvaluable.css">
+  </head>
+  <body>
+    
+    <div class="menu "  >
+      <div class="btn1" id="btn1">
+        <a style=" color: white;" href="#tab1">Inicio</a>
+      </div>
+
+      <div class="btn2" id="btn2">
+        <a style=" color: white;" href="#tab2">Información</a>
+      </div>
+
+      <div class="btn3" id="btn3">
+       <a style=" color: white;" href="#tab3">Formulario</a>
+      </div>
+    </div>
+    
+
+    <div class="tab1" id="tab1">
+      <h1 id="tab1">Inicio</h1>
+
+      <p>Hola mi nombre es <b>Jesús Campanario Sánchez</b> y esta es la practica evaluable 1 de HLC. <br><br> <s>prueba</s>
+        <div class="img">
+          <img style="border-radius: 25px;" class="img" src="https://miro.medium.com/v2/resize:fit:828/format:webp/0*XFKvzn30CglSpb3o" alt="" width="500" lang="500">
+        </div>
+        
+    </div>
+
+    <div class="tab2">
+      <h1 id="tab2">Información</h1>
+      El examen de HLC consta de las siguientes partes: 
+      <ul>
+        <li>Un menú lateral</a></li>
+        <li>Un Formulario</a></li>
+        <li>Varios elementos html como:</a></li>
+          <li>Titulos</li>
+          <li>Imagenes</li>
+          <li>Listas</li>
+      </ul>
+      Algunos datos importantes sobre la practica son: <br><br>
+
+      <table border="1">
+        <thead style="background-color: aqua;">
+            <tr>
+                <th>Forma de entrega</th>
+                <th>Tiempo</th>
+                <th>Calificación</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Git Hub y Git Hub Pages</td>
+                <td>2 horas</td>
+                <td>numerica</td>
+            </tr>
+      </table>
+           
+    </div>
+
+    
+      <h1 id="tab3">Formulario</h1>
+    <div class="tab3">
+      <form>
+        <label for="Nombre">Nombre :</label> <br>
+        <input type="text" id="nombre" required minlength="3" maxlength="50" autocomplete="yes" placeholder="Escribe tu nombre completo"> <br> <br>
+
+        <label for="email">Correo Electronico :</label> <br>
+        <input type="email" id="email" required placeholder="Escribe tu Correo aqui" minlength="6" maxlength="20" autocomplete="yes"> <br> <br>
+
+        <label for="observaciones">Mensaje :</label> <br>
+        <textarea id="observaciones" placeholder="Deja tu Mensaje aqui"></textarea> <br><br>
+
+        <label for="button"></label>
+        <input class="submit" type="submit" id="enviar" value="Enviar"><br> <br>
+      </form>
+    </div>
+    
+  </body>
+  </html>
+  <!-- Fin contenido de la página -->
+
+  <script>
+    function showTabById(tabId) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => {
+        tab.classList.toggle('active', tab.id === tabId);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.menu button');
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const tabId = button.id.replace('btn', 'tab');
+          showTabById(tabId);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
